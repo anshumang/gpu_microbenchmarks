@@ -28,7 +28,7 @@ __global__ void read_mem(char* state){
 	printf("Probe : 72MB to 73MB before allocated\n");
         count = 0;
 	start_address = curr_address;
-	while(count < 16){
+	while(count < 11){
 		curr_address = start_address - count*0x10000;
 		count++;
 		printf("%p => %x\n", curr_address, *((char *)curr_address));
